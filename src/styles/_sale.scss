@@ -1,0 +1,98 @@
+@use 'variaveis';
+
+.sale{
+    padding: 15px;
+    background-color: variaveis.$corFundo;
+    min-height: 60vh;
+    color: variaveis.$corTexto;
+    text-align: center;
+    max-width: 100%;
+
+    h1{
+        padding-bottom: 10px;
+    }
+
+
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 10vh 0 10vh;
+        
+        &__product{
+            padding: 10px;
+            text-align: center;
+            
+            img{
+                height: 350px;
+                width: 350px;
+                border-radius: 40px 0 40px 0;
+                padding-bottom:5px;
+
+                @media(max-width: 768px){
+                    height: 240px;
+                    width: 240px;
+                }
+            }
+
+            .imgPurchase{
+                padding-top:5px;
+                height: 100%; /* Mantém a proporção da imagem */
+                margin: 0 auto; /* Centraliza horizontalmente */
+                text-align: center;
+            }
+
+
+        }
+        &__product--2{
+            padding: 10px;
+            padding-top: 10vh;
+            text-align: center;
+            img{
+                height: 350px;
+                width: 350px;
+                border-radius: 0 40px 0 40px;
+                padding-bottom: 10px;
+
+                @media(max-width: 768px){
+                    height: 240px;
+                    width: 240px;
+                }
+            }
+
+            .imgPurchase{
+                padding-top:5px;
+                height: 100%; /* Mantém a proporção da imagem */
+                margin: 0 auto; /* Centraliza horizontalmente */
+                text-align: center;
+            }
+        }
+    }
+}
+
+.button{
+    display: flex;
+    align-items: center; // centraliza verticalmente
+    justify-content: center; //centraliza horizontalmente, sendo feito o uso do display flex
+    padding-top: 10px;
+}
+
+.buttonPurchase {
+    display: flex;
+    background-color: #262121;
+    height: 100px; //tamanho vertical
+    width: 350px;//tamanho horizontal
+    position: relative; /* Para posicionar as imagens */
+    text-decoration: none;
+    border-radius: 50px;
+    border: solid 3px variaveis.$botaoCompra;
+
+    @media(max-width: 768px){
+        height: 75px; //tamanho vertical
+        width: 220px;//tamanho horizontal
+    }
+
+    &:hover{
+        background-color: lighten(variaveis.$botaoSelectHover, 5%);
+    }
+}

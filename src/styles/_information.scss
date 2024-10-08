@@ -1,0 +1,280 @@
+@use 'variaveis';
+
+#information__geral{
+    background-image: url(/src/images/fundo_matrix.jpg);
+    max-width: 100%;
+    padding: 15px 0;
+}
+
+.information__tittle{
+    color: variaveis.$corTexto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.information {
+    min-height: 60vh;
+    display: flex;
+    max-width: 100%;
+    padding: 15px;
+
+    @media(max-width: 769px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        min-height: 65vh;
+    }
+
+    &__menuMain {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        width: 70vw;
+        transition: width 3s;
+        z-index: 3; /* Ajuste o z-index conforme necessário */
+
+        @media(max-width: 768px) {
+            flex-direction: row;
+            list-style: none;
+            padding-bottom: 10px;
+        }
+
+        }
+        button {
+            width: auto;
+            padding: 0.5vw;
+            border-radius: 100px;
+            cursor: pointer;
+            background-color: variaveis.$botaoFundoInformacao;
+            color: variaveis.$botaoTextoInformacao;
+            
+            &:hover{
+                color: variaveis.$botaoSelectInformacao;
+                border-color: variaveis.$botaoSelectInformacao;
+            }
+
+            @media(max-width: 426px) {
+                
+            }
+        }
+
+    &__menuMain.active {
+        width: 23vw;
+
+        @media(max-width: 1025px){
+            width: 33vw;
+        }
+    }
+
+    &__subMenu--filmes {
+        display: none;
+        list-style: none;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        z-index: 2; /* Ajuste o z-index conforme necessário */
+
+        button {
+            height: auto;
+            width: auto;
+            cursor: pointer;
+            padding: 0.5vw;
+            border-radius: 100px;
+            background-color: variaveis.$botaoFundoInformacao;
+            color: variaveis.$botaoTextoInformacao;
+
+            &:hover{
+                color: variaveis.$botaoSelectInformacao;
+                border-color: variaveis.$botaoSelectInformacao;
+            }
+        }
+
+
+        @media(max-width: 768px){
+            button{
+                width: auto;
+                padding: 0 15px;
+            }
+        }
+
+        @media(max-width: 426px){
+            button{
+                padding: 5px;
+            }
+        }
+    }
+
+    &__subMenu--filmes.active {
+        display: flex;        
+        opacity: 0;
+        width: 30vw;
+        transition: opacity 2s;
+        align-items: center;
+        
+
+        @media(max-width: 1025px){
+        }
+
+        @media(max-width: 768px) {
+            flex-direction: row;
+            list-style: none;
+            transform: translateX(0);
+
+        }
+    }
+
+    &__subMenu--filmes.opacity {
+        opacity: 1;
+    }
+
+    &__subMenu--elenco {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        width: 25vw;
+
+        button {
+            cursor: pointer;
+            padding: 0.5vw;
+            border-radius: 100px;
+            background-color: variaveis.$botaoFundoInformacao;
+            color: variaveis.$botaoTextoInformacao;
+
+            &:hover{
+                color: variaveis.$botaoSelectInformacao;
+                border-color: variaveis.$botaoSelectInformacao;
+            }
+        
+        @media(max-width: 768px){
+            width: auto;
+            padding: 0 20px;
+        }
+        }
+    }
+
+    &__subMenu--elenco.active {
+        display: flex;        
+        opacity: 0;
+        width: 19vw;
+        transition: opacity 2s;
+        
+        @media(max-width: 768px) {
+            flex-direction: row;
+            list-style: none;
+        }
+    }
+
+    &__subMenu--elenco.opacity {
+        opacity: 1;
+    }
+
+    &__description {
+        color: variaveis.$botaoTextoInformacao;
+        position: relative; /* Torna a posição absoluta para deslizar de fora da tela */
+        display: none; /* Esconde inicialmente */
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        left: -20%; /* Inicialmente atrás dos outros containers */
+         /* Adicione transição para as propriedades 'left' e 'width' */
+
+        @media(max-width: 768px){
+            padding-top: 10px;
+        }
+
+        &--content {
+            display: flex;
+            align-items: center;
+            padding: 1vw;
+            background-color: variaveis.$botaoFundoInformacao;
+            border-radius: 20px;
+            width: 40vw;
+            height: auto;
+
+            @media(max-width: 768px) {
+                flex-direction: row;
+                list-style: none;
+            }
+        }
+    }
+
+    &__description.active {
+        display: flex; /* Torna visível */
+        opacity: 0;
+        z-index: 1; /* Traz para a frente */
+        transition: transform 2s, z-index 5s, opacity 0.5s;
+
+        @media(max-width: 768px) {
+            flex-direction: row;
+            list-style: none;
+        }
+    }
+
+    &__description.runContent {
+        width: auto;
+        z-index: 4;
+        transform:translateX(50%);
+        opacity: 1;
+
+        @media(max-width: 769px) {
+            transform:translateX(20%);
+        }
+
+
+        
+    }
+
+    &__curiosities{
+        position: relative; /* Torna a posição absoluta para deslizar de fora da tela */
+        display: none; /* Esconde inicialmente */
+        z-index: 1;
+        left: -20%; /* Inicialmente atrás dos outros containers */
+         /* Adicione transição para as propriedades 'left' e 'width' */
+        
+    }
+
+    &__curiosities.active {
+        display: flex; /* Torna visível */
+        opacity: 0;
+        z-index: 1; /* Traz para a frente */
+        transition: transform 2s, z-index 5s, opacity 0.8s;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media(max-width: 768px) {
+            flex-direction: row;
+            list-style: none;
+        }
+
+
+        p{
+            background-color: variaveis.$botaoFundoInformacao;
+            border-radius: 20px;
+            align-items: center;
+            width: auto;
+            padding: 10px;
+            margin: 10px;
+            font-size: 35px;
+
+            &:hover{
+                color: variaveis.$botaoSelectInformacao;
+                border-color: variaveis.$botaoSelectInformacao;
+            }
+        }
+    }
+
+    &__curiosities.runContent {
+        width: auto;
+        max-width: 70%;
+        z-index: 4;
+        transform:translateX(28%);
+        opacity: 1;
+        color: variaveis.$botaoTextoInformacao;
+    }
+
+}

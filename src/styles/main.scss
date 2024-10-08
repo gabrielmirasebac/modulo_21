@@ -1,5 +1,78 @@
-$bgcolor:blue;
+@use 'variaveis';
+@use 'hero';
+@use 'information';
+@use 'sale';
+@use 'sign_up';
+@use 'social_links';
 
-body{
-    background-color: $bgcolor;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+@mixin textContent($fontSize:25px){
+    font-size: $fontSize;
+    color:variaveis.$corTexto;
+}
+
+.text--section{
+    @include textContent(50px);
+
+    @media(max-width: 768px){
+        @include textContent(40px)
+    }
+
+    @media(max-width: 426px){
+        @include textContent(30px)
+    }
+}
+
+.text--sale{
+    @include textContent(30px);
+
+    @media(max-width: 768px){
+        @include textContent(20px)
+    }
+
+}
+
+.text--menu{
+    @include textContent(45px);
+
+    @media(max-width: 768px){
+        @include textContent(35px);
+    }
+
+    @media(max-width: 426px){
+        @include textContent(25px)
+    }
+}
+
+.text--menu2{
+    @include textContent(40px);
+
+    @media(max-width: 768px){
+        @include textContent(30px);
+    }
+
+    @media(max-width: 426px){
+        @include textContent(20px);
+    }
+}
+
+.text--Content{
+    @include textContent;
+
+    @media(max-width: 768px){
+        @include textContent(15px)
+    }
+
+    @media(max-width: 426px){
+        @include textContent(10px)
+    }
+}
+

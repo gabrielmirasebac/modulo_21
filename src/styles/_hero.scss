@@ -1,0 +1,31 @@
+@use 'variaveis';
+
+.hero{
+    &__content{
+        background-image: url(/src/images/fundo_matrix.jpg);
+        min-height: 60vh;
+        text-align: center; // centraliza na horizontal
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+
+        @media(max-width:426px){
+            display: block;
+            width: 100vw;
+        }
+    
+        &--logo{
+            img{
+                width: 100%;
+            }
+    
+            }
+        &--banner{
+            padding-right: 10px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

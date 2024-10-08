@@ -7,6 +7,158 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-    <h1>ola</h1>
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__content--logo">
+                <img class="tittle_logo" src="./src/images/matrix_tittle.png" alt="">
+            </div>
+            <div class="hero__content--banner">
+            <img src="./src/images/matrix.png" alt="">
+            </div>
+    </div>
+    </section>
+    <section class="sale">
+        <h1 class="text--section">Compre Agora</h1>
+        <div class="sale__content">
+            <div class="sale__content__product">
+                <img src="./src/images/matrix_1.png" alt="">
+                <h2 class="text--sale">Matrix</h2>
+                <div class="button">
+                    <a class="buttonPurchase" href="#">
+                        <img class="imgPurchase" src="/src/images/comprar.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="sale__content__product--2">
+                <img src="./src/images/matrix_2.png" alt="">
+                <h2 class="text--sale">Matrix Reloaded</h2>
+                <div class="button">
+                    <a class="buttonPurchase" href="#">
+                        <img class="imgPurchase" src="/src/images/comprar.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="sale__content__product">
+                <img src="./src/images/matrix_3.jpg" alt="">
+                <h2 class="text--sale">Matrix Revolutions</h2>
+                <div class="button">
+                    <a class="buttonPurchase" href="#">
+                        <img class="imgPurchase" src="/src/images/comprar.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="sale__content__product--2">
+                <img src="./src/images/matrix_4.jpg" alt="">
+                <h2 class="text--sale">Matrix Resurrection</h2>
+                <div class="button">
+                    <a class="buttonPurchase" href="#">
+                        <img class="imgPurchase" src="/src/images/comprar.png" alt="">
+                    </a>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section id="information__geral">
+        <h1 class="information__tittle text--section">Informações</h1>
+        <div class="information">
+            <ul class="information__menuMain " id="menu" >
+                <li>
+                    <button class="text--menu" id="filme" data-menu="filmes">Filmes</button>
+                </li>
+                <li>
+                    <button class="text--menu" id="elenco" data-menu="elenco">Elenco</button>
+                </li>
+                <li>
+                    <button class="text--menu" id="curiosities" data-menu="curiosities">Curiosidades</button>
+                </li>
+            </ul>
+            <ul class="information__subMenu--filmes" id="subMenuFilmes">
+                <li id="matrix1">
+                    <button class="text--menu2" data-filmes="matrix1">Matrix</button>
+                </li>
+                <li id="matrix2">
+                    <button class="text--menu2" data-filmes="matrix2">Matrix Reloaded</button>
+                </li>
+                <li id="matrix3">
+                    <button class="text--menu2" data-filmes="matrix3">Matrix Revolutions</button>
+                </li>
+                <li id="matrix4">
+                    <button class="text--menu2" data-filmes="matrix4">Matrix Resurrection</button>
+                </li>
+            </ul>
+            <ul class="information__subMenu--elenco" id="subMenuElenco">
+                <li>
+                    <button class="text--menu2" data-elenco="neo">Keanu Reeves</button>
+                </li>
+                <li>
+                    <button class="text--menu2" data-elenco="trinity">Carrie-Anne Moss</button>
+                </li>
+                <li>
+                    <button class="text--menu2" data-elenco="morpheus">Laurence Fishburne</button>
+                </li>
+            </ul>
+        <div class="information__description">
+            <div class="information__description--content">
+                <p class="text--content">
+                </p>
+            </div>
+        </div>
+        <div class="information__curiosities" id="information__curiosities">
+                <div class="information__curiosities--geral"><p class="text--content">Keanu Reeves decidiu dividir seus ganhos com toda a equipe que fez parte da gravação do filme, como maquiagem, som, iluminação, etc.</p></div>
+                <div class="information__curiosities--geral"><p class="text--content">O código que aparece nas telas quando a Matrix é codificada é uma receita japonesa de sushi</p></div>
+                <div class="information__curiosities--geral"><p class="text--content">A cena do tiroteio no saguão do prédio, na qual os Agentes estavam segurando Morpheus, levou 10 dias para ser filmada</p></div>
+                <div class="information__curiosities--geral"><p class="text--content">No Oscar de 2000, o filme conquistou quatro estatuetas nas seguintes categorias: Melhor Efeitos Visuais, Melhor Edição, Melhores Efeitos Sonoros e Melhor Som</p></div>
+                <div class="information__curiosities--geral"><p class="text--content">Foi nele que o efeito bullet time (aquele de quando o Neo desvia das balas em câmera lenta) foi usado pela primeira vez no cinema. É uma técnica de filmagem que permite captar cenas de ação específicas em 360 graus e reproduzi-las em câmera lenta;    </p></div>
+                <div class="information__curiosities--geral"><p class="text--content">Matrix foi o primeiro filme a vender 1 milhão de DVDs</p></div>
+                <div class="information__curiosities--geral"><p class="text--content">Os atores principais tiveram que passar por um treinamento físico seis meses antes, para dominarem a técnica das artes marciais e se moverem de forma acrobática</p></div>
+            </div>
+        </div>
+</section>
+    <section class="sign_up">
+        <div class="sign_up__content">
+            <h1 class="text--section">Inscreva-se</h1>
+            <form>
+                <input class="text--menu2" type="text" id="nome" name="nome" placeholder="Nome" required>
+                <input class="text--menu2" type="email" id="email" name="email" placeholder="Email" required>
+                <input class="text--menu2" type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                <label>
+                <input type="checkbox" id="matrix" name="matrix">
+                Aceito receber email sobre o universo de MATRIX.
+                </label>
+                <button class="text--menu" type="submit">Enviar</button>
+            </form>
+    </div>
+    </section>
+    <section>
+    <ul class="social__links">
+        <li>
+            <a href="#">
+            <img src="./src/images/instagram.png" alt="logotipo do instagram ícones">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <img src="./src/images/facebook.png" alt="logotipo do facebook ícones">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <img src="./src/images/linkedin.png" alt="logotipo do linkedin ícones">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <img src="./src/images/twitter.png" alt="logotipo do twitter ícones">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+            <img src="./src/images/whatsapp.png" alt="logotipo do whatsapp ícones">
+            </a>
+        </li>
+
+    </ul>
+    </section>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>
